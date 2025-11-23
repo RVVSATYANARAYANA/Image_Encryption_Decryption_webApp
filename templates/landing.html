@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Encryption with Chaos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="landing-page">
+        <div class="landing-container">
+            
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+            </div>
+            <h2 href="/whats-new" class="whats-new"> Introducing </h2>
+            <h1>Image Encryptor </h1>
+            <p>Transform Your Images into Unreadable Format</p>
+            <a href="/encrypt-decrypt" class="get-started-btn">Get Started <span>→</span></a>
+        </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

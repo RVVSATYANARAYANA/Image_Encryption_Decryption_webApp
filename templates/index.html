@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Encryption/Decryption</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="encrypt-decrypt-page">
+    <h1>A Tool For Image Encryption&Decryption </h1>
+
+    <!-- Encryption Section -->
+    <div class="section">
+        <h2 style="text-align: center;">Encrypt Image</h2>
+
+       
+        <form id="encryptForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="encryptFile">Select Image (JPG, PNG):</label>
+                <input type="file" id="encryptFile" name="file" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="makeSquare">Convert to Square:</label>
+                <input type="checkbox" id="makeSquare" name="make_square">
+                <span>(Pads image to square dimensions)</span>
+            </div>
+            <button type="submit">Encrypt</button>
+        </form>
+        <div id="encryptResult"></div>
+    </div>
+
+    <!-- Decryption Section -->
+    <div class="section">
+        <h2 style="text-align: center;" >Decrypt Image</h2>
+        <form id="decryptForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="decryptFile">Select Encrypted Image:</label>
+                <input type="file" id="decryptFile" name="file" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="keyFile">Select Key File:</label>
+                <input type="file" id="keyFile" name="key" accept=".key" required>
+            </div>
+            <button type="submit">Decrypt</button>
+        </form>
+        <div id="decryptResult"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
